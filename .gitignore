@@ -1,0 +1,18 @@
+# Secrets and credentials - NEVER commit these
+.key
+.pfx
+.pem
+password
+secret
+.env
+
+# Large or generated files
+.vhdx
+.iso
+.avhdx
+.vmrs
+
+# Editor and OS clutter
+.vscode
+Thumbs.db
+.DS_Store

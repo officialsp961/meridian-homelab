@@ -1,0 +1,64 @@
+==================
+Goal
+==================
+Build a fictional company called Meridian Dynamics (6 departments, 30 users, 2 domain controllers, file server, print server, 10 Windows clients) on Hyper-V, and publish every step of it to GitHub as a portfolio. Plan on 8 to 10 weeks at 6 to 8 hours a week.
+
+==================
+Plan
+==================
+Company
+-Meridian Dynamics
+
+AD domain (FQDN)
+-corp.meridian.lab
+
+NetBIOS name
+-MERIDIAN
+
+Departments (OUs)
+-IT, HR, Finance, Sales, Marketing, Operations
+
+Users
+-30 (5 per department)
+
+Client PCs
+-10 (CL01 to CL10)
+
+Network
+-10.10.10.0/24 on an internal Hyper-V switch
+
+DC01
+-Domain controller, DNS, DHCP (to start)
+-Windows Server 2022
+-10.10.10.10
+
+DC02
+-Second domain controller, DNS
+-Windows Server 2022
+-10.10.10.11
+
+FS01
+-File server, DFS, quotas
+-Windows Server 2022
+-10.10.10.20
+
+PS01
+-Print server
+-Windows Server 2022
+-10.10.10.21
+
+MGMT01
+-Admin workstation with RSAT tools
+-Windows 10 Pro (easier to run on my host machine, plus i have windows 11 experience at work)
+-10.10.10.30
+
+CL01 to CL10
+-Client machines (DHCP)
+-Windows 10 Pro
+-10.10.10.100 to 10.10.10.200
+
+PFW01 (optional)
+-pfSense router for internet access
+-10.10.10.1
+
+
