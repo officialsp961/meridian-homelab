@@ -1,11 +1,14 @@
 # meridian-homelab
 On-Prem Sys-administration
 
+Purpose
+To further learn on-prem system administration.
+
 Meridian Homelab
 A Windows Server Active Directory envrionment built on Hyper-V to practice on-premises system administration. DOcumented phase by phase.
 
 Status
-Phase 0 comeplete, Phase 1 in progress.
+Phase 5 comeplete, Phase 6 in progress.
 
 Environment
 Domain: corp.meridian.lab
