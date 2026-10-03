@@ -1,47 +1,31 @@
-# Phase N: Title
+# Phase 5: OU, Users, and Groups
 
-**Date:** YYYY-MM-DD
-**Time spent:** X hours
-**Status:** In progress / Done
-**Branch:** phase/NN-name
+**Date:** 10-3-2026
+**Time spent:** 2 hours
+**Status:** Done
+**Branch:** 05-ou-users-groups
 
 ## Objective
-One or two sentences: what I built in this phase and why it matters.
-
-## Prerequisites
-- What had to exist before I started this phase.
+Design and build a clean, scalable OU struture with mulitple departments and users.
 
 ## Steps performed
-1. What I did, with the exact command or setting.
-
-```powershell
-   Command I ran
-```
-
-   ![Describe what the screenshot shows](../images/phaseNN/01-description.png)
-   *Figure 1: Why this screenshot matters.*
-
-2. Next step...
-
-## Verification
-How I proved it works: the command I ran, the output, and what it showed.
-
-```powershell
-Command used to verify
-```
-
-![Verification output](../images/phaseNN/NN-verification.png)
-
-## Problems encountered
-- Short description, with a link to the full write-up:
-  [Problem title](../troubleshooting/YYYY-MM-DD-short-title.md)
+1. Whiteboarded an OU struture, then used Claude AI to create a script to automate OU and group creation.
+   - This was done mainly to save time, as I already have experience creating OU and security groups.
+   ![OU Structure](../images/phase05/01-OU-Creation.png)
+2. Redirect new computers into the new computers OU
+3. Create Users
+   - Created a CSV with random users, departments, and titles
+   - Used a script from work to create users quickly
+4. Start making the groups functional
+   - Delegate control for the departments OU to group for helpdesk to enable poassword reset permissions
+5. Create my own admin account
+6. Enabled AD recycle bin
+   - Prevents things from being permanently delted unless intended
 
 ## What I learned
-Two or three sentences in my own words.
-
-## Changes I made to the plan
-Anything I did differently from the guide, and why. (For example: Windows 10 Pro clients.)
+I was completely unaware you could change the default location of new computers! This is super nice, and I can see it being useful in my current workflow, so I will be bringing this up to our administration team.
 
 ## Related files
-- Scripts: `scripts/NN-name.ps1`
-- Other docs: `docs/00-overview/ip-plan.md`
+- [Script](../../scripts/06-new-ou-structure.ps1)
+- [Script](../../scripts/07-new-ad-users.ps1)
+- [Decisions](../decisions/phase05.md)
