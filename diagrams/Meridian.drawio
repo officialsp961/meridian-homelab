@@ -1,0 +1,67 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Page-1" id="NPboiHaZ0TdOWs-oQLtX">
+    <mxGraphModel dx="908" dy="1271" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="hPu7o49UcV0hcFVFz1BC-24" edge="1" parent="1" source="hPu7o49UcV0hcFVFz1BC-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="hPu7o49UcV0hcFVFz1BC-6" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="hPu7o49UcV0hcFVFz1BC-1" parent="1" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="&lt;font style=&quot;font-size: 19px;&quot;&gt;Internet&lt;/font&gt;" vertex="1">
+          <mxGeometry height="80" width="120" x="465" y="10" as="geometry" />
+        </mxCell>
+        <mxCell id="hPu7o49UcV0hcFVFz1BC-2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;roundedPerimeter=1;align=left;fillColor=#d5e8d4;strokeColor=#82b366;" value="" vertex="1">
+          <mxGeometry height="690" width="890" x="80" y="160" as="geometry" />
+        </mxCell>
+        <mxCell id="hPu7o49UcV0hcFVFz1BC-17" edge="1" parent="1" source="hPu7o49UcV0hcFVFz1BC-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;endArrow=none;endFill=0;" target="hPu7o49UcV0hcFVFz1BC-14">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="hPu7o49UcV0hcFVFz1BC-19" edge="1" parent="1" source="hPu7o49UcV0hcFVFz1BC-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;endArrow=none;endFill=0;" target="hPu7o49UcV0hcFVFz1BC-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="hPu7o49UcV0hcFVFz1BC-20" edge="1" parent="1" source="hPu7o49UcV0hcFVFz1BC-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;endArrow=none;endFill=0;" target="hPu7o49UcV0hcFVFz1BC-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="hPu7o49UcV0hcFVFz1BC-21" edge="1" parent="1" source="hPu7o49UcV0hcFVFz1BC-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;endArrow=none;endFill=0;" target="hPu7o49UcV0hcFVFz1BC-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="hPu7o49UcV0hcFVFz1BC-22" edge="1" parent="1" source="hPu7o49UcV0hcFVFz1BC-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;endArrow=none;endFill=0;" target="hPu7o49UcV0hcFVFz1BC-9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="hPu7o49UcV0hcFVFz1BC-23" edge="1" parent="1" source="hPu7o49UcV0hcFVFz1BC-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;endArrow=none;endFill=0;" target="hPu7o49UcV0hcFVFz1BC-12">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="hPu7o49UcV0hcFVFz1BC-3" parent="1" style="image;html=1;image=img/lib/clip_art/networking/Switch_128x128.png" value="LAB-NAT internal switch, 10.10.10.0/24" vertex="1">
+          <mxGeometry height="70" width="460" x="295" y="515" as="geometry" />
+        </mxCell>
+        <mxCell id="hPu7o49UcV0hcFVFz1BC-5" parent="1" style="image;html=1;image=img/lib/clip_art/computers/Server_128x128.png" value="DC01, Domain controller&lt;br&gt;10.10.10.10" vertex="1">
+          <mxGeometry height="110" width="120" x="100" y="310" as="geometry" />
+        </mxCell>
+        <mxCell id="hPu7o49UcV0hcFVFz1BC-6" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;span style=&quot;text-align: left;&quot;&gt;&lt;font style=&quot;font-size: 18px;&quot;&gt;Hyper-V Host, NAT Gateway 10.10.10.1&lt;/font&gt;&lt;/span&gt;" vertex="1">
+          <mxGeometry height="80" width="367.5" x="341.25" y="170" as="geometry" />
+        </mxCell>
+        <mxCell id="hPu7o49UcV0hcFVFz1BC-7" parent="1" style="image;html=1;image=img/lib/clip_art/computers/Server_128x128.png" value="DC02, Domain controller&lt;br&gt;10.10.10.11" vertex="1">
+          <mxGeometry height="110" width="120" x="283" y="310" as="geometry" />
+        </mxCell>
+        <mxCell id="hPu7o49UcV0hcFVFz1BC-8" parent="1" style="image;html=1;image=img/lib/clip_art/computers/Server_128x128.png" value="FS01, File server&lt;br&gt;10.10.10.20" vertex="1">
+          <mxGeometry height="110" width="120" x="465" y="310" as="geometry" />
+        </mxCell>
+        <mxCell id="hPu7o49UcV0hcFVFz1BC-9" parent="1" style="image;html=1;image=img/lib/clip_art/computers/Server_128x128.png" value="PS01, Print server&lt;br&gt;10.10.10.21" vertex="1">
+          <mxGeometry height="110" width="120" x="643" y="310" as="geometry" />
+        </mxCell>
+        <mxCell id="hPu7o49UcV0hcFVFz1BC-12" parent="1" style="image;html=1;image=img/lib/clip_art/computers/Monitor_Tower_128x128.png" value="Admin workstation&lt;br&gt;10.10.10.30" vertex="1">
+          <mxGeometry height="100" width="130" x="820" y="320" as="geometry" />
+        </mxCell>
+        <mxCell id="hPu7o49UcV0hcFVFz1BC-16" connectable="0" parent="1" style="group" value="" vertex="1">
+          <mxGeometry height="110" width="820" x="115" y="680" as="geometry" />
+        </mxCell>
+        <mxCell id="hPu7o49UcV0hcFVFz1BC-14" parent="hPu7o49UcV0hcFVFz1BC-16" style="rounded=1;whiteSpace=wrap;html=1;roundedPerimeter=1;" value="" vertex="1">
+          <mxGeometry height="110" width="820" as="geometry" />
+        </mxCell>
+        <mxCell id="hPu7o49UcV0hcFVFz1BC-15" parent="hPu7o49UcV0hcFVFz1BC-16" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;font style=&quot;font-size: 20px;&quot;&gt;CL01 to CL10, Windows 10 Pro, DHCP 10.10.10.100 to .200&lt;/font&gt;" vertex="1">
+          <mxGeometry height="70" width="750" x="35" y="20" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
