@@ -29,7 +29,6 @@
    - Restart-Service w32time
    - w32tm /query /status
 
-
 ## Verification
 1. Listed Services in powershell to confirm NTDS, DNS, NetLogon, and KDC were all running
    -  Get-Service NTDS, DNS, Netlogon, KDC | Select-Object Name, Status
@@ -37,13 +36,11 @@
 3. dcdiag
    - dcdiag /v | Out-File C:\dcdiag-dc01.txt
 
-
-![Verification output](../images/phaseNN/NN-verification.png)
-
 ## Problems encountered
 1. Failed markers in dcdiag output
    - DFSREvent failure
       - [Troubleshooting](../troubleshooting/phase03/03-DFSR-failure.md)
+      - Evidence of resolution
       - ![DFSR Resolved](../images/phase03/Verification-DFSR-Fixed.png)
    - SystemLog failure
       - [Troubleshooting](../troubleshooting/phase03/03-SystemLog-failure.md)
