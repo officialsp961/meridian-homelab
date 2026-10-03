@@ -1,9 +1,9 @@
-# Phase N: Title
+# Phase 1: Hyper-V and Network Setup
 
-**Date:** YYYY-MM-DD
-**Time spent:** X hours
-**Status:** In progress / Done
-**Branch:** phase/NN-name
+**Date:** 10-2-2026
+**Time spent:** .75 hours
+**Status:** Done
+**Branch:** phase/01-hyperv-network
 
 ## Objective
 - Phase 1 is all planning and setup. This was crucial to avoid hiccups later and ensure standardized setups with multiple servers and clients.
@@ -20,7 +20,7 @@
 1. Ran Get-VMSwitch to show th virtual switch exsists
 2. Ran Get-NetNat to show the network is set properly, including IP scheme and prefix
 
- ![Virtual switch setup confirmation](../images/phaseNN/04-get-netnat-labnat.png)
+ ![Virtual switch setup confirmation](../images/phase01/04-get-netnat-labnat.png)
 
 ## Problems encountered
 - None yet!

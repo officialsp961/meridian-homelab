@@ -1,4 +1,4 @@
-# Phase N: Title
+# Phase 2: GOlden Image
 
 **Date:** 10-2-2026
 **Time spent:** 4 hours - mostly waiting on server udpates
@@ -50,5 +50,5 @@
 - sconfig is a super useful cmd to know! it gets you quick access to everything you need to spin up  aserver and get it running, including remote desktop setup, network setup, and naming.
 
 ## Related files
-- Scripts: `scripts/02-golden-image-new-template-vm.ps1`, `scripts/02-new-lab-vm.ps1`
-- Other docs: `docs/00-overview/ip-plan.md`
+- Scripts: [Golden Image Template](../../scripts/02-golden-image-new-template-vm.ps1), [Create VMs](../../scripts/scripts02-new-lab-vm.ps1)
+- Other docs: [IP Plan](../../docs/overview/ip-plan.md)`docs/00-overview/ip-plan.md`
