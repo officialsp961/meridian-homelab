@@ -51,4 +51,4 @@
 
 ## Related files
 - Scripts: [Golden Image Template](../../scripts/02-golden-image-new-template-vm.ps1), [Create VMs](../../scripts/scripts02-new-lab-vm.ps1)
-- Other docs: [IP Plan](../../docs/overview/ip-plan.md)`docs/00-overview/ip-plan.md`
+- Other docs: [IP Plan](../../docs/overview/ip-plan.md)
