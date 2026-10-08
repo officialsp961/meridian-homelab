@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Drives clsid="{8FDDCC1A-0C3C-43cd-A6B4-71A6DF20DA8C}"><Drive clsid="{935D1B74-9CB8-4e3c-9914-7DD559B7A417}" name="S:" status="S:" image="2" changed="2026-10-08 00:12:53" uid="{3E3C4B98-F163-4984-B887-483B840348C3}"><Properties action="U" thisDrive="NOCHANGE" allDrives="NOCHANGE" userName="" path="\\corp.meridian.lab\shares\marketing" label="Marketing" persistent="1" useLetter="1" letter="S"/></Drive>
+</Drives>
