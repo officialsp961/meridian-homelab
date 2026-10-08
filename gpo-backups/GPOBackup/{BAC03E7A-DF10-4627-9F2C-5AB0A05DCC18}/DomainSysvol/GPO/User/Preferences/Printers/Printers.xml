@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Printers clsid="{1F577D12-3D1B-471e-A1B7-060317597B9C}"><SharedPrinter clsid="{9A5E9697-9095-436d-A0EE-4D128FDFBCE5}" name="IT-PRN-01" status="IT-PRN-01" image="2" changed="2026-10-08 00:58:33" uid="{CF8BD469-F5D1-4EF3-94D1-B68CEE667F01}" userContext="1" bypassErrors="1"><Properties action="U" comment="" path="\\PS01\IT-PRN-01" location="" default="1" skipLocal="0" deleteAll="0" persistent="0" deleteMaps="0" port=""/></SharedPrinter>
+</Printers>
