@@ -1,80 +1,117 @@
-# Phase 09: Group Policy
+# Phase 9: Group Policy
 
-**Date:** 10-7-2026
+**Date:** 2026-10-07
 **Time spent:** 3 hours
 **Status:** Done
-**Branch:** 09-group-policy
+**Branch:** phase/09-group-policy
 
 ## Objective
-1. Create and link GPO to OU for control resources and settings.
+Create Group Policy Objects and link them to OUs to control settings and resources:
+branding, security settings, restrictions, drive and printer mapping, and local admin access.
+
+## Prerequisites
+- Clients joined to the domain and sorted into department OUs ([Phase 8](08-clients.md))
+- The `Branding` share on FS01 holding the lock screen and wallpaper images
+  ([Phase 6](06-file-server.md))
 
 ## Steps performed
-1. Created central store for policy definitions
-    - ![Central-store](../images/phase09/central-store.png)
+All GPOs were built by hand in **Group Policy Management**.
 
-        *CMDs for creation and verification of central store folder creation*
-2. Set password policy for domain
-    - ![Password-policy](../images/phase09/password-policy.png)
-        
-        *Confirmation of password policy setting*
-3. Created a lockscreen GPO
-    - GPO creates a local file in windows default lockscreen folder that is a copy of the lockscreen image in "\\FS01\Branding"
-        - This enables the image to be updated at any time
-    - GPO creates registry keys bypassing lockscreen GPO limitations for Windows 10 Pro
-4. Created a lockscreen GPO
-5. Created a security GPO
-    - Set logon message "This system belongs to Meridian Dynamics. Use is monitored. Unauthorized access is prohibited."
-6. Created a GPO that block USB access for all Non-IT users
-7. Created a GPO that blocks:
-    - All control panels items except for mouse settings
-    - Settings
-    - Command Prompt
-    - Registry Editor
-    - ![User-restrictions](../images/phase09/user-restrictions.png)
-8. Created a drive and prtiner GPO for each department
-    - Mapped public drive to all users as P:
-    - Mapped department drives as S:
-    - Mapped department printers and set as default
-9. Created a GPO that gives helpdesk local admin rights to PCs in the departments OU
-    - Creates a local group called "Administrator (built-in)"
-        - The member of this group is the helpdesk security group
-10. Test Scenario
-    - Blocked inheritance on Finance OU and watched the lockscreen and wallpaper gpo fail to apply.
-    - Enforeced these policies and watched them re-apply, bypassing the inheritance block
-11. Performed a backup of all GPO
+1. Created the Central Store of policy templates by copying `PolicyDefinitions` into SYSVOL,
+   so every admin sees the same settings.
+
+   ![Central Store creation and verification](../images/phase09/central-store.png)
+
+   *Figure 1: Commands creating and verifying the Central Store folder.*
+
+2. Set the domain password policy in the Default Domain Policy.
+
+   ![Password policy](../images/phase09/password-policy.png)
+
+   *Figure 2: The password and lockout settings applied.*
+
+3. Created a lock screen GPO:
+   - A Files preference copies the lock screen image from the `Branding` share on FS01 to
+     a local folder on every PC, so the image can be changed at any time by replacing one file.
+   - Registry preference items work around Windows 10 Pro ignoring the lock screen policy.
+4. Created a separate wallpaper GPO that sets the desktop wallpaper from the `Branding` share.
+5. Created a security GPO that sets the logon message: "This system belongs to Meridian
+   Dynamics. Use is monitored. Unauthorized access is prohibited." 
+6. Created a GPO that blocks removable storage (USB) for all non-IT users, linked to the
+   five non-IT department OUs.
+7. Created a user restrictions GPO, linked to the five non-IT department OUs, that blocks:
+   - All Control Panel items except Mouse
+   - The Settings app
+   - Command Prompt
+   - The Registry Editor
+
+   ![User restrictions GPO](../images/phase09/user-restrictions.png)
+
+   *Figure 3: The restriction settings in the GPO.*
+
+8. Created a drive and printer GPO for each department, linked to the department OU:
+   - Mapped the Public share to all users as `P:`
+   - Mapped each department's share as `S:`
+   - Mapped the department's printer and set it as the default
+9. Created a GPO that gives the helpdesk local administrator rights on department PCs, using
+   a Group Policy Preference that adds `GG-IT-Helpdesk` to each computer's local
+   Administrators group.
+10. Ran two "break it on purpose" tests:
+    - Turned on **Block Inheritance** on the Finance OU, and the lock screen and wallpaper
+      policies stopped applying.
+    - Set those policies to **Enforced**, and they applied again despite the block.
+11. Backed up all GPOs with `Backup-GPO`, and saved an HTML report.
 
 ## Verification
-1. ![Lockscreen-gpo](../images/phase09/Verification-lockscreen-gpo.png)
+1. The lock screen policy works on a Windows 10 Pro client.
 
-    *Lockscreen is working*
-2. ![Wallpaper-gpo](../images/phase09/Verification-wallpaper-gpo.png)
+   ![Lock screen GPO working](../images/phase09/Verification-lockscreen-gpo.png)
 
-    *Wallpaper GPO is working*
-3. ![User-restrictions](../images/phase09/Verification-user-restrictions.png)
+   *Figure 4: The branded lock screen.*
 
-    *CMD, USB, Reg Edit restricted*
-4. ![Logon-Message](../images/phase09/Verification-logon-message.png)
+2. The wallpaper policy works.
 
-    *Logon mesage appears before user logon*
-5. ![Printer-mapped](../images/phase09/Verification-printer-mapped.png)
+   ![Wallpaper GPO working](../images/phase09/Verification-wallpaper-gpo.png)
 
-    *Printer successfully mapped after GPO update*
+   *Figure 5: The branded desktop wallpaper.*
+
+3. The restrictions work: Command Prompt, the Registry Editor, and USB access are blocked.
+
+   ![User restrictions in effect](../images/phase09/Verification-user-restrictions.png)
+
+   *Figure 6: Blocked tools for a restricted user.*
+
+4. The logon message appears before sign-in.
+
+   ![Logon message](../images/phase09/Verification-logon-message.png)
+
+   *Figure 7: The logon message shown at the sign-in screen.*
+
+5. The department printer mapped after a policy update.
+
+   ![Printer mapped by GPO](../images/phase09/Verification-printer-mapped.png)
+
+   *Figure 8: The printer appears for the HR user after the fix.*
 
 ## Problems encountered
-1. Printer was not mapping
+1. **The department printer did not map.** The report showed the printer item failing with
+   error `0x80070005` (access denied), even though the user could connect by hand.
+   See the [printer troubleshooting entry](../troubleshooting/phase09/09-printer-map-failure.md).
 
-## Changes Made to Plan
-1. Decided to split lockscreen and wallpaper into separate GPO
-2. Some of the GPO names were changed from the plan
+## Changes made to the plan
+1. Split the lock screen and wallpaper into two GPOs.
+2. Renamed some GPOs from the plan
 
-## What I Learned
+## What I learned
 1. A Group Policy Preference can add a domain security group to the local Administrators
-   group on every PC in an OU. Using it, `GG-IT-Helpdesk` has admin rights on all department
-   computers with no shared local password. Access follows group membership: adding or
+   group on every PC in an OU. With it, `GG-IT-Helpdesk` has admin rights on all department
+   computers with no shared local password, and access follows group membership: adding or
    removing someone from the group is the only change needed.
 
-## Related Files
-1. [Printer-map-error](../troubleshooting/phase09/09-printer-map-failure.md)
-2. [Break-testing-1](../troubleshooting/phase09/09-gpo-computer-in-wrong-ou.md)
-3. [Break-testing-2](../troubleshooting/phase09/09-gpo-block-inheritance-enforced.md)
-4. [GPO-backup](../../gpo-backups/GPOBackup/)
+
+## Related files
+- Troubleshooting:
+  - [Printer not mapping](../troubleshooting/phase09/09-printer-map-failure.md)
+  - [Break test: computer in the wrong OU](../troubleshooting/phase09/09-gpo-computer-in-wrong-ou.md)
+  - [Break test: block inheritance and Enforced](../troubleshooting/phase09/09-gpo-block-inheritance-enforced.md)
+- [GPO backups](../../gpo-backups/GPOBackup/)
