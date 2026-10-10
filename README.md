@@ -72,4 +72,4 @@ the problems I hit, and the troubleshooting are my own, and I checked each write
 actually did.
 
 ## Status
-Core lab complete, with phases 1 to 11 documented. [Add anything you plan to build next.]
+Core lab complete, with phases 1 to 11 documented.
