@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Groups clsid="{3125E937-EB16-4b4c-9934-544FC6D24D26}"><Group clsid="{6D4A79E4-529C-4481-ABD0-F5BD7EA93BA7}" name="Administrators (built-in)" image="2" changed="2026-10-10 15:20:16" uid="{9263B08B-FF06-4C8F-8A97-30B987E0177D}"><Properties action="U" newName="" description="" deleteAllUsers="0" deleteAllGroups="0" removeAccounts="0" groupSid="S-1-5-32-544" groupName="Administrators (built-in)"><Members><Member name="MERIDIAN\GG-IT-Helpdesk" action="ADD" sid="S-1-5-21-3634755428-333028013-2742207644-1125"/></Members></Properties></Group>
+</Groups>
