@@ -1,6 +1,6 @@
 # Phase 3: Creating a Domain Controller and Forest
 
-**Date:** 2026-10-03
+**Date:** 10-03-2026
 **Time spent:** 1 hour
 **Status:** Done
 **Branch:** phase/03-dc01-forest

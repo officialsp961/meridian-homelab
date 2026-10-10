@@ -1,6 +1,6 @@
 # Phase 6: File Server, Shares, Quotas, and DFS
 
-**Date:** 2026-10-04
+**Date:** 10-04-2026
 **Time spent:** 5 hours
 **Status:** Done
 **Branch:** 06-file-server

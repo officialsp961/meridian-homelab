@@ -1,6 +1,6 @@
 # Phase 1: Hyper-V and Network Setup
 
-**Date:** 2026-10-02
+**Date:** 10-02-2026
 **Time spent:** 2 hours 
 **Status:** Done
 **Branch:** phase/01-hyperv-network

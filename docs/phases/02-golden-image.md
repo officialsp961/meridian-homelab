@@ -1,6 +1,6 @@
 # Phase 2: Golden Image
 
-**Date:** 2026-10-02
+**Date:** 10-02-2026
 **Time spent:** 4 hours (mostly waiting on server updates)
 **Status:** Done
 **Branch:** phase/02-golden-image
