@@ -141,3 +141,6 @@ recorded times. I reocrded the timestamp of my cmds by copy pasting them into Cl
   `/syncall` printed errors, so I read the state directly instead of trusting one message.
 - Losing a DC leaves loose ends that nothing warns you about: stale DNS records, a stale
   failover relationship, and DNS client lists that still point at the dead server.
+
+## Related Files
+[DC failure runbook](../runbooks/phase11/replace-failed-domain-controller.md)
