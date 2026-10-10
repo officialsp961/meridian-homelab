@@ -1,6 +1,6 @@
 # Phase 8: Clients
 
-**Date:** 2026-10-05
+**Date:** 10-05-2026
 **Time spent:** 5 hours
 **Status:** Done
 **Branch:** phase/08-clients

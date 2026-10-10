@@ -1,6 +1,6 @@
 # Phase 7: Print Server
 
-**Date:** 2026-10-04
+**Date:** 10-04-2026
 **Time spent:** 3 hours
 **Status:** Done
 **Branch:** phase/07-print-server

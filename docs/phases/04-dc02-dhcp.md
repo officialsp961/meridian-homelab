@@ -1,6 +1,6 @@
 # Phase 4: DC02, DHCP, and Failover
 
-**Date:** 2026-10-03
+**Date:** 10-03-2026
 **Time spent:** 2 hours
 **Status:** Done
 **Branch:** phase/04-dc02-dhcp

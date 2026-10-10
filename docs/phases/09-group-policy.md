@@ -1,6 +1,6 @@
 # Phase 9: Group Policy
 
-**Date:** 2026-10-07
+**Date:** 10-07-2026
 **Time spent:** 3 hours
 **Status:** Done
 **Branch:** phase/09-group-policy

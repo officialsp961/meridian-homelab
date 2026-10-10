@@ -1,6 +1,6 @@
 # Phase 5: OUs, Users, and Groups
 
-**Date:** 2026-10-03
+**Date:** 10-03-2026
 **Time spent:** 2 hours
 **Status:** Done
 **Branch:** phase/05-ou-users-groups
