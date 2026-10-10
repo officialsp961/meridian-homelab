@@ -22,7 +22,7 @@ other goes down.
    - In the DHCP console, created the `Meridian-Clients` scope with the New Scope wizard:
      `10.10.10.100` to `10.10.10.200`, mask `255.255.255.0`, 8-day lease.
    - Set the scope options in the wizard: router `10.10.10.1`, DNS domain
-     `corp.meridian.lab`, and the DNS servers. [Say which DNS servers you entered.]
+     `corp.meridian.lab`, and the DNS servers.
    - Activated the scope.
 2. Built DC02: gave it `10.10.10.11`, pointed its DNS at DC01, confirmed it could resolve
    `corp.meridian.lab`, installed AD DS and DNS with **Add Roles and Features**, and

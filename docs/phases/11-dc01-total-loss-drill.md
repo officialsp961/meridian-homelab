@@ -63,7 +63,7 @@ Times are elapsed on my stopwatch.
 1. **DHCP scope options were not in sync before the drill.** A client renewing from DC02
    received an address and gateway but no DNS servers, and fell back to `fec0:` addresses,
    so name lookups failed. I set option 6 (`10.10.10.10`, `10.10.10.11`) on both DHCP
-   servers and replicated the scope. [State which server was missing it, if you confirmed.]
+   servers and replicated the scope.
    This would have broken every client once DC02 became the only DHCP server.
 2. **Deleting the VM left its disks locked.** Three files remained in `D:\Hyper-V\VHDs`:
    `DC01.vhdx` and two checkpoint files (`.avhdx`, 6.3 GB and 13.8 GB) from earlier
@@ -73,8 +73,7 @@ Times are elapsed on my stopwatch.
    Emulator, RID master, and Infrastructure master moved to DC02. The Schema master and
    Domain naming master failed with "Access is denied," because they need **Schema Admins**
    and **Enterprise Admins**. I ran the seizure as the built-in Administrator, which holds
-   both groups. [Your notes record 10 min 27 sec for this fix. Say whether that is the
-   stopwatch reading when it was resolved or how long the detour lasted.] I did not add
+   both groups. I did not add
    Domain Admins to those groups, since they should stay empty except when needed.
 4. **DC02's DNS settings pointed at the dead DC first.** DC02's DNS client list was
    `10.10.10.10, 127.0.0.1`, so every lookup waited for DC01 to time out. Asking DC02
@@ -95,15 +94,14 @@ Times are elapsed on my stopwatch.
    successful inbound replication from DC02 on all five partitions. The connection tests
    also passed (DNS, RPC port 135, `nltest`, `dcdiag /test:connectivity`). I did not confirm
    the cause. The likely explanation is that the replication connections were still being
-   built. [State how it ended: a later clean `syncall`, or the canary test.]
+   built.
 7. **A stale DHCP failover relationship survived on DC02.** `Get-DhcpServerv4Failover`
    showed `DC01-DC02-Failover` in state `PartnerDown`, pointing at the old DC01. The rebuilt
    DC01 had no DHCP role, so querying it returned error `DHCP 20005`. I installed and
    authorized DHCP on DC01, removed the old relationship (the removal warned it could not
    delete it on the partner, which no longer existed), and recreated it with the wizard. The
    state returned to `Normal`, and option 6 was correct on both servers. The recreated
-   relationship has `AutoStateTransition` set to False, unlike the original. [Say whether
-   you changed it.]
+   relationship has `AutoStateTransition` set to False, unlike the original.
 
 ## Verification
 ```text
