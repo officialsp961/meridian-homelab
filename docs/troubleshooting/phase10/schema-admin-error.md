@@ -17,7 +17,7 @@ The error was the same on every retry. DC02 had been powered off.
 ## Troubleshooting steps
 1. **First failure: insufficient rights.** The command failed even from a Domain Admin account.
    Schema changes need membership in **Schema Admins**, which Domain Admins do not have.
-   I ran powersehll as the DC admin to resolve the permissions issue.
+   I ran powershell as the local admin for the DC to resolve the permissions issue.
 2. **Checked the sign-in token.** `whoami /groups | findstr /i "Schema"` showed
    `MERIDIAN\Schema Admins` enabled, so rights were no longer the problem.
 3. **Checked where the command ran.** `netdom query fsmo` showed DC01 holds all five FSMO
