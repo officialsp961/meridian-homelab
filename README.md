@@ -12,7 +12,7 @@ problems I hit along the way.
 | --- | --- |
 | Domain | `corp.meridian.lab`, two domain controllers (AD DS, DNS), DHCP failover |
 | Directory | Six departments, a nested OU structure, 30 users created from a CSV, role-based groups (AGDLP) |
-| File services | FS01 with department shares, home folders, FSRM quotas and file screens, shadow copies, and a DFS namespace |
+| File services | FS01 and FS02 with DFS Replication, department shares, home folders, FSRM quotas and file screens, shadow copies, and a DFS namespace served by both servers |
 | Print services | PS01 with seven access-controlled printer queues |
 | Endpoints | Ten Windows 10 Pro clients and an admin workstation with RSAT tools |
 | Group Policy | Branding, security baseline, USB and user restrictions, drive and printer mapping, local admin delegation |
@@ -33,6 +33,7 @@ so each VM only stores its own changes.
   policy has to reach a PC before encryption starts, and proved it on a second client.
 - **A troubleshooting log.** Real problems with symptoms, steps, cause, and fix, such as a Group
   Policy item that reported success without doing anything, and a DHCP scope missing its DNS option.
+ - **File server failover.** I added a second file server and replicated the department, public, home, and branding folders with DFS Replication. With FS01 hard powered off, users kept their shares, home folders, and wallpaper through the namespace, failover took about 31 seconds, and files written during the outage replicated back.
 
 ## Documentation
 | Phase | Topic |
@@ -48,6 +49,7 @@ so each VM only stores its own changes.
 | 9 | [Group Policy](docs/phases/09-group-policy.md) |
 | 10 | [Backups, LAPS, and BitLocker](docs/phases/10-level-up.md) |
 | 11 | [Domain controller loss drill](../meridian-homelab/docs/phases/11-dc01-total-loss-drill.md) |
+| 12 | [DFS replication with a second file server](docs/phases/12-dfs-replication.md) |
 
 Also in the repo:
 - [`docs/runbooks/`](docs/runbooks/): clearing a stuck print queue, replacing a failed domain controller
@@ -60,6 +62,7 @@ Also in the repo:
 Active Directory, Group Policy, DNS, DHCP and DHCP failover, Windows Server 2022, Hyper-V, file and
 print services, DFS, FSRM, role-based access control (AGDLP), LAPS, BitLocker, backup and recovery,
 PowerShell, Git and GitHub, runbook and technical documentation, troubleshooting.
+DFS Namespaces and Replication, high availability, and permission auditing.
 
 ## About this documentation
 I wrote the original notes for each phase while building the lab late at night after work, so they
@@ -72,4 +75,4 @@ the problems I hit, and the troubleshooting are my own, and I checked each write
 actually did.
 
 ## Status
-Core lab complete, with phases 1 to 11 documented.
+Core lab complete, with phases 1 to 12 documented. Updated to v1.1

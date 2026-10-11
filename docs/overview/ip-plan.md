@@ -9,6 +9,7 @@ Based on structure from current employer, with my own changes.
 | `10.10.10.11` | DC02 (also secondary DNS) |
 | `10.10.10.20` | FS01 file server |
 | `10.10.10.21` | PS01 print server |
+| `10.10.10.22` | FS02 file server (DFS replication partner) |
 | `10.10.10.30` | MGMT01 admin workstation |
 | `10.10.10.50` to `10.10.10.59` | Printers (static) |
 | `10.10.10.100` to `10.10.10.200` | DHCP scope for clients |
