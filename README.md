@@ -25,7 +25,7 @@ so each VM only stores its own changes.
 - **Domain controller loss drill.** I destroyed DC01 on purpose and recovered while DC02 carried
   the domain. A replacement DC was signed in at 33 minutes, replicating at about 43, and fully
   redundant at 55 minutes 45 seconds.
-  [Drill write-up](docs/troubleshooting/phase11/11-dc01-total-loss-drill.md) and
+  [Drill write-up](docs/phases/11-dc01-total-loss-drill.md) and
   [runbook](docs/runbooks/phase11/replace-failed-domain-controller.md).
 - **LAPS.** Each PC gets its own local admin password, stored encrypted in Active Directory. Only
   Domain Admins can decrypt it, and the helpdesk is local admin through Group Policy instead.
@@ -49,7 +49,7 @@ so each VM only stores its own changes.
 | 9 | [Group Policy](docs/phases/09-group-policy.md) |
 | 10 | [Backups, LAPS, and BitLocker](docs/phases/10-level-up.md) |
 | 11 | [Domain controller loss drill](../meridian-homelab/docs/phases/11-dc01-total-loss-drill.md) |
-| 12 | [DFS replication with a second file server](docs/phases/12-dfs-replication.md) |
+| 12 | [DFS replication with a second file server](docs/phases/12-DFS.md) |
 
 Also in the repo:
 - [`docs/runbooks/`](docs/runbooks/): clearing a stuck print queue, replacing a failed domain controller
