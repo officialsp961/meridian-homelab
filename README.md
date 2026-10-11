@@ -48,7 +48,7 @@ so each VM only stores its own changes.
 | 8 | [Clients](docs/phases/08-clients.md) |
 | 9 | [Group Policy](docs/phases/09-group-policy.md) |
 | 10 | [Backups, LAPS, and BitLocker](docs/phases/10-level-up.md) |
-| 11 | [Domain controller loss drill](../meridian-homelab/docs/phases/11-dc01-total-loss-drill.md) |
+| 11 | [Domain controller loss drill](docs/phases/11-dc01-total-loss-drill.md) |
 | 12 | [DFS replication with a second file server](docs/phases/12-DFS.md) |
 
 Also in the repo:
